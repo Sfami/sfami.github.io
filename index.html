@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takalani's Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7346671700592944"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <!------------------------- Header / Navbar ------------------------------>
+    <section class="header">
+        <nav>
+            <!-- <a href="index.html"><img src="images/logo.png"></a> -->
+            <a href="index.html"><h2>Orifha</h2></a>
+            <div class="nav-links" id="navLinks">
+                <!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
+                <ion-icon name="menu-outline" onclick="hideMenu()"></ion-icon>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="#skills-section">SKILLS</a></li>
+                    <li><a href="#projects-section">PROJECTS</a></li>
+                    <li><a href="#about-me-section">ABOUT</a></li>
+                    <li><a href="#contact-section">CONTACT</a></li>
+                </ul>
+            </div>
+            <ion-icon name="menu-outline" onclick="showMenu()"></ion-icon>
+            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+        </nav>
+    </section>
+
+    <div class="text-box">
+        <h1>Software Developer</h1>
+        <p>Welcome to my personal website where you get to learn more about me as a developer.<br> Please feel free to contact me for more information.</p>
+        <a href="#contact-section" class="hero-btn">Contact me to learn more.</a>
+    </div>
+
+    <!----------------------- Skills --------------------------->
+    <section class="course" id="skills-section">
+        <h1>Tech Stack</h1>
+        <p>
+            These are the technologies that I have learned over the years as a developer,
+            <br> 
+            together with the level of skill I have for each one of them.
+        </p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Python</h3>
+                <img src="images/python.png">
+                <!-- <p>
+                    Advanced
+                </p> -->
+            </div>
+            <div class="course-col">
+                <h3>React</h3>
+                <img src="images/react.png">
+                <!-- <p>
+                    Beginner
+                </p> -->
+            </div>
+            <div class="course-col">
+                <h3>MySQL</h3>
+                <img src="images/mysql.png">
+                <!-- <p>
+                    Beginner
+                </p> -->
+            </div>
+            <div class="course-col">
+                <h3>Java</h3>
+                <img src="images/java.png">
+                <!-- <p>
+                    Intermediate
+                </p> -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Docker</h3>
+                <img src="images/docker2.png">
+                <!-- <p>
+                    Advanced
+                </p> -->
+            </div>
+            <div class="course-col">
+                <h3>C#</h3>
+                <img src="images/c-sharp.jpeg">
+                <!-- <p>
+                    Intermediate
+                </p> -->
+            </div>
+            <div class="course-col">
+                <h3>PHP</h3>
+                <img src="images/php.png">
+                <!-- <p>
+                    Intermediate
+                </p> -->
+            </div>
+            <div class="course-col">
+                <h3>R</h3>
+                <img src="images/R.jpeg">
+                <!-- <p>
+                    Beginner
+                </p> -->
+            </div>
+        </div>
+
+    </section>
+
+    <!----------------------- Projects --------------------------->
+    <section class="course" id="projects-section">
+        <h1>Projects Portfolio</h1>
+        <p>These are the projects I have developed thus far using the above mentioned technologies.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>MERN Web Crawler</h3>
+                <h5>MongoBD, ExpressJs, ReactJs, and NodeJs.</h5>
+                <br>
+                <p>
+                    The aim was to create a web crawler using the above mentioned tech stack.  
+                    The final application should be able to crawl all links on a given webpage (url), 
+                    and store them in a MongoBD database.
+                    The web app then displays the database information on the frontend using an API request.
+                </p>
+            </div>
+
+            <div class="course-col">
+                <h3>Android Artisan App</h3>
+                <h5>Android Studio, Java, SQL, and PHP.</h5>
+                <br>
+                <p>
+                    The aim was to create an application that would allow artisans to
+                    assists customers with artisan tasks in the comfort of their home during lockdown. <br> 
+                </p>
+            </div>
+
+            <div class="course-col">
+                <h3>Java Web Crawler</h3>
+                <h5>Apache HttpClient 4.5+, Apache Maven, ReactJs, and Java 1.7+.</h5>
+                <br>
+                <p>
+                    The aim was to create a web crawler using the above mentioned tech stack.  
+                    The final application should be able to crawl all links on a given webpage (url), 
+                    and store the results in a csv document.
+                </p>
+            </div>
+            
+        </div>
+        <!-- <div class="row">
+            <div class="course-col">
+                <h3>MERN Web Crawler</h3>
+                <h5>MongoBD, ExpressJs, ReactJs, and NodeJs.</h5>
+                <br>
+                <p>
+                    The aim was to create a web crawler using the above mentioned tech stack.  
+                    The final application should be able to crawl all links on a given webpage (url), 
+                    and store them in a MongoBD database.
+                    The web app then displays the database information on the frontend using an API request.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Java Web Crawler</h3>
+                <h5>Apache HttpClient 4.5+, Apache Maven, ReactJs, and Java 1.7+.</h5>
+                <br>
+                <p>
+                    The aim was to create a web crawler using the above mentioned tech stack.  
+                    The final application should be able to crawl all links on a given webpage (url), 
+                    and store the results in a csv document.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>MERN Web Crawler</h3>
+                <h5>MongoBD, ExpressJs, ReactJs, and NodeJs.</h5>
+                <br>
+                <p>
+                    The aim was to create a web crawler using the above mentioned tech stack.  
+                    The final application should be able to crawl all links on a given webpage (url), 
+                    and store them in a MongoBD database.
+                    The web app then displays the database information on the frontend using an API request.
+                </p>
+            </div>
+        </div> -->
+        
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7346671700592944"
+     crossorigin="anonymous"></script>
+    
+        <!-- BannerAdPersonal -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-7346671700592944"
+        data-ad-slot="3328879454"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    </section>
+
+
+    <!-------------- Footer ------------------>
+    <section class="about-me" id="about-me-section">
+
+        <h1>About Me</h1>
+        <p>
+            I am a software developer who is highly skilled in multiple tech stacks.
+            <br> 
+            I am an MSc candidate as the University of the Witwatersrand.
+        </p>
+
+        
+    </section>
+    
+    <section class="contact" id="contact-section">
+
+        <h1>Contact</h1>
+        
+        <p>Phone: +27 63 631 9450, Email: tomufamadi@gmail.com</p>
+        <!-- <p>Email: tomufamadi@gmail.com</p>  -->
+
+        <div class="new-icons">
+            <a class="github-icon" href="https://github.com/Sfami" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            
+            <a class="linkedin-icon" href="https://linkedin.com" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+
+            <a class="twitter-icon" href="https://twitter.com" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+
+            <a class="facebook-icon" href="https://facebook.com" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        </div>
+
+    </section>
+    
+
+    <!-------------- JavaScript for Toggle Menu ------------------>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
