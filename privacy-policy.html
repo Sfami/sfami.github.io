@@ -19,7 +19,7 @@
       $.getJSON("https://sfamisoftwares.com/signs.json", function(data){
         var sign_data = '';
         $.each(data, function(key, value){
-          sign_data += '<img>'+value.name+'</img>';
+          sign_data += '<img>'+value.image+'</img>';
         });
         $("#image").append(sign_data);
       });
