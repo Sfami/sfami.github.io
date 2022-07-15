@@ -16,7 +16,10 @@
     var image = document.getElementById("image");
     fetch("https://sfamisoftwares.com/signs.json")
       .then(response => response.json())
-      .then(data => { console.log(data.name)})
+      .then(data => { 
+        console.log(data.name)
+        document.querySelector("#image").image = data.image
+      })
   </script>
 </body>
 
