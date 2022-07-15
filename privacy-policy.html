@@ -11,15 +11,26 @@
       <a href="index.html" class="sf-depth-1">Home</a>
     </li>
   </ul>
-  <img src="" alt="" id="image">
+  <div class="image-holder" id="image">
+    <img src="" alt="">
+  </div>
   <script>
-    var image = document.getElementById("image");
-    fetch("https://sfamisoftwares.com/signs.json")
-      .then(response => response.json())
-      .then(data => { 
-        console.log(data.name)
-        document.querySelector("#image").image = data.image
-      })
+    $document().ready(function(){
+      $.getJSON("https://sfamisoftwares.com/signs.json", function(data){
+        var sign_data = '';
+        $.each(data, function(key, value){
+          sign_data += '<img>'+value.name+'</img>';
+        });
+        $("#image").append(sign_data);
+      });
+    });
+    // var image = document.getElementById("image");
+    // fetch("https://sfamisoftwares.com/signs.json")
+    //   .then(response => response.json())
+    //   .then(data => { 
+    //     console.log(data.name)
+    //     document.querySelector("#image").image = data.image
+    //   })
   </script>
 </body>
 
