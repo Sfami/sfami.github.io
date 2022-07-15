@@ -7,9 +7,18 @@
 </head>
 <body>
 	<ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none sf-js-enabled sf-shadow" style="">
-      <li id="main-standardfront-page" class="sf-depth-1 sf-no-children">
-        <a href="index.html" class="sf-depth-1">Home</a>
-      </li>
-    </ul>
+    <li id="main-standardfront-page" class="sf-depth-1 sf-no-children">
+      <a href="index.html" class="sf-depth-1">Home</a>
+    </li>
+  </ul>
+  <img src="" alt="" id="image">
+  <script>
+    var image = document.getElementById("image");
+    fetch("https://sfamisoftwares.com/signs.json")
+      .then(response => response.json())
+      .then(data => { console.log(data.name)})
+  </script>
 </body>
+
+
 </html>
