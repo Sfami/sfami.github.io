@@ -15,22 +15,23 @@
 </head>
 <body>
     <div class="header">
-        <nav>
-            <a href="index.html"><h2>Orifha</h2></a>
-            <div class="nav-links" id="navLinks">
-                <!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
-                <ion-icon class="fa fa-times" onclick="hideMenu()"></ion-icon>
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="#skills-section">SKILLS</a></li>
-                    <li><a href="#projects-section">PROJECTS</a></li>
-                    <li><a href="#about-me-section">ABOUT</a></li>
-                    <li><a href="#contact-section">CONTACT</a></li>
-                </ul>
-            </div>
-            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
-            <ion-icon class="fa fa-bars" onclick="showMenu()"></ion-icon>
-        </nav>
+        <div id="navbar">
+            <nav>
+                <a href="index.html"><h2>Orifha</h2></a>
+                <div class="nav-links" id="navLinks">
+                    <!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
+                    <ion-icon class="fa fa-times" onclick="hideMenu()"></ion-icon>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="#skills-section">SKILLS</a></li>
+                        <li><a href="#projects-section">PROJECTS</a></li>
+                        <li><a href="#about-me-section">ABOUT</a></li>
+                        <li><a href="#contact-section">CONTACT</a></li>
+                    </ul>
+                </div>
+                <ion-icon class="fa fa-bars" onclick="showMenu()"></ion-icon>
+            </nav>
+        </div>
     </div>
 
     <div class="text-box">
@@ -90,42 +91,6 @@
     <section class="course" id="projects-section">
         <h2>Projects Portfolio</h2>
         <p>These are the projects I have developed thus far using the above mentioned technologies.</p>
-
-        <!-- <div class="row">
-            <div class="course-col">
-                <h3>MERN Web Crawler</h3>
-                <h5>MongoBD, ExpressJs, ReactJs, and NodeJs.</h5>
-                <br>
-                <p>
-                    The aim was to create a web crawler using the above mentioned tech stack.  
-                    The final application should be able to crawl all links on a given webpage (url), 
-                    and store them in a MongoBD database.
-                    The web app then displays the database information on the frontend using an API request.
-                </p>
-            </div>
-
-            <div class="course-col">
-                <h3>Android Artisan App</h3>
-                <h5>Android Studio, Java, SQL, and PHP.</h5>
-                <br>
-                <p>
-                    The aim was to create an application that would allow artisans to
-                    assists customers with artisan tasks in the comfort of their home during lockdown. <br> 
-                </p>
-            </div>
-
-            <div class="course-col">
-                <h3>Java Web Crawler</h3>
-                <h5>Apache HttpClient 4.5+, Apache Maven, ReactJs, and Java 1.7+.</h5>
-                <br>
-                <p>
-                    The aim was to create a web crawler using the above mentioned tech stack.  
-                    The final application should be able to crawl all links on a given webpage (url), 
-                    and store the results in a csv document.
-                </p>
-            </div>
-            
-        </div> -->
             <div class="course-col">
                 <h3>MERN Web Crawler</h3>
                 <h5>MongoBD, ExpressJs, ReactJs, and NodeJs.</h5>
@@ -200,14 +165,6 @@
                 <ion-icon name="logo-linkedin"></ion-icon>
             </a>
 
-            <!-- <a class="twitter-icon" href="https://twitter.com" target="_blank">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-
-            <a class="facebook-icon" href="https://facebook.com" target="_blank">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a> -->
-            
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -231,6 +188,48 @@
         function hideMenu(){
             navLinks.style.right = "-200px";
         }
+    </script>
+
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+    <script type="text/javascript">
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll("nav .container ul li");
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLi.forEach((li) => {
+            li.classList.remove("active");
+            if (li.classList.contains(current)) {
+              li.classList.add("active");
+            }
+          });
+        });
     </script>
 </body>
 </html>
